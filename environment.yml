@@ -4,34 +4,32 @@ channels:
     - conda-forge
     - pytorch
     - damianavila82
+    - dhirschfeld
+    - rogerramos
+    - creditx
+    - anaconda
 dependencies:
-    - python=3.6.*
+    - python>=3.6
     - numpy #=1.13.*
     - matplotlib #=2.1.*
     - seaborn #=0.8.1
     - jupyter #=1.0.0
     - pandas #=0.21.*
     # DL related
-    - pytorch=0.4.*
+    - pytorch>=0.4
     - torchvision #=0.2.*
     - mkl #=2018.0.*
     - scikit-learn
+    - skorch
      # for Jupyter
     - rise #=5.1.*
     - jupyter_contrib_nbextensions #=0.3.3
     # for NLP
     - nltk
+    # for VS code
+    - pylint #==1.8.*
+    - autopep8 #==1.3.*
+    - pip
     - pip:
-        # for VS code
-        - pylint #==1.8.*
-        - autopep8 #==1.3.*
-        # for Pytorch
-        # - fastai
-        - skorch
-        - livelossplot
-        # for NLP
-        - bs4
         - torchtext
-        # misc
-        - pandas_summary
-        - sklearn-pandas
+        - bs4
