@@ -8,6 +8,7 @@ channels:
     - rogerramos
     - creditx
     - anaconda
+    - fastai
 dependencies:
     - python>=3.6
     - numpy #=1.13.*
@@ -21,6 +22,7 @@ dependencies:
     - mkl #=2018.0.*
     - scikit-learn
     - skorch
+    - fastai
      # for Jupyter
     - rise #=5.1.*
     - jupyter_contrib_nbextensions #=0.3.3
