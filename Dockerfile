@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.1-cudnn7-devel-ubuntu16.04
+FROM nvidia/cuda:10.0-cudnn7-runtime-ubuntu18.04
 
 ENV LANGUAGE en_US.UTF-8
 ENV LANG en_US.UTF-8
@@ -21,11 +21,13 @@ COPY ./environment.yml /environment.yml
 
 RUN conda env create -f /environment.yml  \
 	&& conda clean --all -y \
-	&& groupadd appuser \
+ 	&& groupadd appuser \
 	&& useradd --create-home -r --shell=/bin/bash -g appuser appuser \
 	&& mkdir -p /opt/notebooks \
 	&& chown appuser:appuser /opt/notebooks \
-	&& chown -R appuser:appuser /opt/conda/envs 
+	&& chown -R appuser:appuser /opt/conda/envs \
+	&& mkdir /opt/data \
+	&& chown -R appuser:appuser /opt/data
 
 VOLUME "/opt/notebooks"
 
