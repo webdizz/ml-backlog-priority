@@ -20,7 +20,7 @@ ENV PATH /opt/conda/bin:$PATH
 COPY ./environment.yml /environment.yml
 
 RUN conda env create -f /environment.yml  \
-        && conda install --name backlog cuda92 \
+        && conda install --name backlog cuda92 -c pytorch \
 	&& conda clean --all -y \
  	&& groupadd appuser \
 	&& useradd --create-home -r --shell=/bin/bash -g appuser appuser \
