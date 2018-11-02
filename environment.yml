@@ -17,6 +17,7 @@ dependencies:
     - pandas
     # DL related
     - pytorch-nightly
+    - torchvision
     - mkl
     - scikit-learn
     - fastai
