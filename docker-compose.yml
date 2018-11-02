@@ -9,3 +9,11 @@ services:
     volumes:
      - ./:/opt/notebooks
      - ~/.jupyter:/home/appuser/.jupyter
+    environment:
+      - VIRTUAL_HOST=ml-bp.agile.cc
+      - VIRTUAL_PORT=8888
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
